@@ -8,14 +8,11 @@ A Neovim wrapper around Vale, the syntax-aware linter for prose.
 
 ## Configuration
 
-```vimscript
-lua << EOF
+```lua
 require("vale").setup({
   -- path to the vale binary.
   bin="/bin/vale",
   -- path to your vale-specific configuration.
   vale_config_path="$HOME/.config/vale/vale.ini",
-})
-EOF
 })
 ```
