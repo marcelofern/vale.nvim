@@ -6,6 +6,28 @@ A Neovim wrapper around Vale, the syntax-aware linter for prose.
 
 ![demo](static/vale_demo.gif)
 
+## Installation
+
+Using [vim-plug](https://github.com/junegunn/vim-plug)
+
+```viml
+Plug 'marcelofern/vale.nvim'
+```
+
+Using [dein](https://github.com/Shougo/dein.vim)
+
+```viml
+call dein#add('marcelofern/vale.nvim')
+```
+
+Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
+```lua
+use {
+  'marcelofern/vale.nvim'
+}
+```
+
 ## Configuration
 
 ```lua
