@@ -11,9 +11,11 @@ local create_lines_from_temp_file = function(range_start, range_end)
   local temp_file_name = temp_file.get_name()
   local current_file_name = vim.api.nvim_buf_get_name(0)
 
-  if string.find(temp_list[1], "[--config] Runtime error") then
-    vim.api.nvim_err_writeln("Vale.nvim: Invalid configuration file")
-    return
+  if #temp_list ~= 0 then
+    if string.find(temp_list[1], "[--config] Runtime error") then
+      vim.api.nvim_err_writeln("Vale.nvim: Invalid configuration file")
+      return
+    end
   end
 
   local lines = {}
