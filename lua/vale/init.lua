@@ -6,9 +6,9 @@ function vale.setup(opts)
   end
 
   local valid_keys = {bin=true, vale_config_path=true}
-  for k, v in ipairs(opts) do
+  for k, v in pairs(opts) do
     if valid_keys[k] == nil then
-      error_msg = k .. " is not a valid key for vale.nvim"
+      error_msg = "Vale.nvim: '" .. k .. "' is not a valid config key."
       vim.api.nvim_err_writeln(error_msg)
     end
   end
@@ -22,12 +22,13 @@ function vale.setup(opts)
 end
 
 function vale.run(range_start, range_end, range)
+  local is_visual = true
   if range == 0 then
-    -- not on visual mode, run Vale on the whole file.
+    is_visual = false
     range_start = 1
     range_end = vim.fn.line("$")
   end
-  require("vale.quickfix_window").create(range_start, range_end)
+  require("vale.quickfix_window").create(range_start, range_end, is_visual)
 end
 
 return vale
