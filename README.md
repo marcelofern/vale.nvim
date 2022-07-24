@@ -38,3 +38,8 @@ require("vale").setup({
   vale_config_path="$HOME/.config/vale/vale.ini",
 })
 ```
+
+## Requirements
+
+[Neovim (v0.7.0)](https://github.com/neovim/neovim/releases/tag/v0.7.0) or the
+latest neovim nightly commit is required for `vale.nvim` to work.
