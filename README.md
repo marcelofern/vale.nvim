@@ -43,3 +43,16 @@ require("vale").setup({
 
 [Neovim (v0.7.0)](https://github.com/neovim/neovim/releases/tag/v0.7.0) or the
 latest neovim nightly commit is required for `vale.nvim` to work.
+
+## Don't know what Vale is and how to configure it?
+
+Instructions to install and configure Vale go as follows:
+
+1. Head down to Vale's [Github page](https://github.com/errata-ai/vale).
+2. From the [releases page](https://github.com/errata-ai/vale/releases),
+   download and install the most adequate binary for your system.
+3. Go to the [Config Generator](https://vale.sh/generator) website to select
+   the configuration you want to use.
+4. Run `vale sync` so that all the necessary packages are installed.
+
+Enjoy!
