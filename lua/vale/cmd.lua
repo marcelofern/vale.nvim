@@ -7,7 +7,7 @@ function cmd.build()
     config.get_bin(),
     "--output=line",
     "--config=" .. config.get_vale_config_path(),
-    vim.api.nvim_buf_get_name(0),
+    string.format('"%s"', vim.api.nvim_buf_get_name(0)),
   }, " ")
 end
 
